@@ -1,0 +1,38 @@
+*/
+Given a string, find the length of the longest substring, which has all distinct characters.
+
+ Example 1:
+Input: String="aabccbb"
+Output: 3
+Explanation: The longest substring with distinct characters is "abc"
+*/
+
+import java.util.*;
+
+public class solution {
+     public static void main(String [] args) {
+    	 Scanner sc=new Scanner(System.in);
+         String s=sc.next() ;
+         HashMap<Character,Integer > hm=new HashMap<>();
+         
+         int start=0,maxLen=0;
+         for(int i=0;i<s.length();i++)
+         {
+        	 char ch=s.charAt(i);
+        	 if(hm.containsKey(ch))
+        	 {
+        		 start=Math.max(start, hm.get(ch)+1);
+        	 }
+        	 hm.put(ch, i);
+        	 
+        	 maxLen=Math.max(maxLen, i-start+1);
+        	 
+        	
+         }
+         
+         System.out.println(maxLen);
+         
+         sc.close();
+        
+    }
+}
