@@ -7,6 +7,7 @@ Both the left and right subtrees must also be binary search trees.
  
 Example 1:
 ![tree](https://user-images.githubusercontent.com/91825550/163685944-69ed75ce-7e37-490c-80a8-eba3cb6c9957.png)
+
 Input: root = [4,1,6,0,2,5,7,null,null,null,3,null,null,null,8]
 Output: [30,36,21,36,35,26,15,null,null,null,33,null,null,null,8]
 */
